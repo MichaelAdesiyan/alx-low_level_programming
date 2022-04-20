@@ -1,57 +1,30 @@
+/*
+* Auth: Gbemi Jacob Adebayo
+*/
+
 #include <stdio.h>
+
 /**
-*main - Entry point
-*
-*Return: Always 0 (success/correct)
-*/
+ * main - Function to print all possible combinations of single-digit numbers.
+ *
+ * Return: Always 0.
+ */
+
 int main(void)
-
 {
-int number;
+	int num;
 
-for (number = 48; number <= 57; number++)
-{
-putchar(number);
+	for (num = 0; num <= 9; num++)
+	{
+		putchar((num % 10) + '0');
+		if (num == 9)
+			continue;
 
-if (number == 57)
-{
-break;
-}
+		putchar(',');
+		putchar(' ');
+	}
 
-putchar(',');
-putchar (' ');
-}
+	putchar('\n');
 
-putchar('\n');
-
-return (0);
-
-}i#include <stdio.h>
-/**
-*main - Entry point
-*
-*Return: Always 0 (success/correct)
-*/
-int main(void)
-
-{
-int number;
-
-for (number = 48; number <= 57; number++)
-{
-putchar(number);
-
-if (number == 57)
-{
-break;
-}
-
-putchar(',');
-putchar (' ');
-}
-
-putchar('\n');
-
-return (0);
-
+	return (0);
 }
