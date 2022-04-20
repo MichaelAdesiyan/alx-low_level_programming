@@ -10,7 +10,7 @@ int _atoi (char *s)
 	int res = 0;
 	int sig = -1;
 	int brk = 0;
-	for (1 = 0; s[i] != '\0';i++)
+	for (i = 0; s[i] != '\0';i++)
 	{
 		if (s[i] == '-')
 			sig = sig * -1;
@@ -18,6 +18,7 @@ int _atoi (char *s)
 		{
 			res = res *10;
 			res -= (s[i] - '0');
+			brk = 1;
 		}
 		else if (brk == 1)
 			break;
