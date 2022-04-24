@@ -1,4 +1,4 @@
- #ifndef MAIN.H
+#ifndef MAIN.H
 #define MAIN.H
 /*
  * ADESIYAN MICHAEL TOBILOBA 
