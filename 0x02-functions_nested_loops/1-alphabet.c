@@ -1,14 +1,19 @@
 #include "main.h"
+
 /**
- * print_alphabet 
- * Return: void 
+ * print_alphabet - prints lowercase alphabet
+ * Return: void
  */
+void print_alphabet(void)
 {
 	int x = 97;
-	while (a <= 122)
+
+	while (x <= 122)
 	{
-		char c = x;
-		_putchar(c);
+		char t = x;
+
+		_putchar(t);
 		x++;
 	}
+	_putchar('\n');
 }
