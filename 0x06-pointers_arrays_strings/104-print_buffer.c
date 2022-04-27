@@ -8,43 +8,43 @@
  * Return: void
  */
 
-void print_buffer(char *a, int size)
+void print_buffer(char *b, int size)
 {
-	int b, c, d;
+	int o, j, i;
 
-	b = 0;
+	o = 0;
 
 	if (size <= 0)
 	{
 		printf("\n");
 		return;
 	}
-	while (b < size)
+	while (o < size)
 	{
-		c = size - b < 10 ? size - b : 10;
-		printf("%08x: ", b);
-		for (d = 0; d < 10; d++)
+		j = size - o < 10 ? size - o : 10;
+		printf("%08x: ", o);
+		for (i = 0; i < 10; i++)
 		{
-			if (d < c)
-				printf("%02x", *(a + b + d));
+			if (i < j)
+				printf("%02x", *(b + o + i));
 			else
 				printf("  ");
-			if (d % 2)
+			if (i % 2)
 			{
 				printf(" ");
 			}
 		}
-		for (i = 0; d < c; d++)
+		for (i = 0; i < j; i++)
 		{
-			int x = *(a + b + d);
+			int c = *(b + o + i);
 
-			if (x < 32 || x > 132)
+			if (c < 32 || c > 132)
 			{
-				x = '.';
+				c = '.';
 			}
-			printf("%x", x);
+			printf("%c", c);
 		}
 		printf("\n");
-		b += 10;
+		o += 10;
 	}
 }
