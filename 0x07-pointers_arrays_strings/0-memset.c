@@ -9,15 +9,15 @@
  * Return: Nothing.
  */
 
-char *_memset(char *c, char z, unsigned int m)
+char *_memset(char *s, char b, unsigned int n)
 {
-	unsigned int x = 0;
+	unsigned int i = 0;
 
-	while (x < m)
+	while (i < n)
 	{
 
-		*(c + x) = z;
-		x += 1;
+		*(s + i) = b;
+		i += 1;
 	}
-	return (c);
+	return (s);
 }
