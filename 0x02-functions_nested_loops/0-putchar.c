@@ -3,8 +3,8 @@
 #include <stdlib.h>
 
 /**
- * @main - function prints _putchar
- * @Return: return 0
+ * main - function prints _putchar
+ * Return: return 0
  */
 
 int main(void)
