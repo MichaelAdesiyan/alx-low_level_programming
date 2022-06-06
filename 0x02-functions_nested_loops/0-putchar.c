@@ -3,11 +3,11 @@
 #include <stdlib.h>
 
 /**
- * @func - function prints _putchar
+ * @main - function prints _putchar
  * @Return: return 0
  */
 
-int func(void)
+int main(void)
 {
 	_putchar('-');
 	_putchar('p');
