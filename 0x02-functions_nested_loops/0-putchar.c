@@ -4,7 +4,7 @@
 
 /**
  * main - function prints _putchar
- * Return: return 0
+ * Return: alwayseturn 0
  */
 
 int main(void)
