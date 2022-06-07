@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * int _islower - checking the lower characers
+ *  _islower - checking the lower characers
  * @c: the character
  * Return: if success return 1 else 0
 **/
