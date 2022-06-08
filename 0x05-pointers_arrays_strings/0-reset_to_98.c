@@ -3,7 +3,7 @@
 #include <stdlib.h>
 /**
  * reset_to_98 - function that takes a pointer to an int
- * @*n: parameter
+ * @n: parameter
  * Return: void
  */
 void reset_to_98(int *n)
