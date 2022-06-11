@@ -1,5 +1,11 @@
 #include "main.h"
 #include <stdlib.h>
+/**
+ * read_textfile - function that reads text file and prints posix
+ * @filename: file name
+ * @letters: file name
+ * Return: void
+ */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	ssize_t a, b;
