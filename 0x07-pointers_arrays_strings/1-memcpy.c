@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * _memcpy - prints buffer in hexa
+ * _memcpy - function that copies memory area
  * @src: buffer
  * @dest: buffer2
  * @n: size
- * Return: Nothing.
+ * Return: void
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
