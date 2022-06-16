@@ -1,9 +1,10 @@
 #include "main.h"
 /**
- * _put - function prints a string following by newline
+ * _puts - print a string followed by newline
  * @str: parameter
- * Return: void
+ * Return: Always void
  */
+
 void _puts(char *str)
 {
 	int i;
