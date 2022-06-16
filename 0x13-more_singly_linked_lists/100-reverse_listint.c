@@ -7,12 +7,10 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	listint_t *prev, *next;
+	listint_t *prev = NULL;
+	listint_t *next = NULL;
 
-	if (head == NULL || *head == NULL)
-		return (NULL);
-	prev = NULL;
-	while (*head != NULL)
+	while (*head)
 	{
 		next = (*head)->next;
 		(*head)->next = prev;
