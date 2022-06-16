@@ -2,40 +2,48 @@
 #include <stdlib.h>
 
 /**
- * _memset - copy char
- * @s: string
- * @b: input
- * @n: bytes
- * Return: string
+ * *string_nconcat - function concatenate two string
+ * @s1: first string
+ * @s2: second string
+ * @n: int
+ * Return: return pointer, if fail return Null
  */
 
-char *_memset(char *s, char b, unsigned int n)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int i;
+	unsigned int i1;
+	unsigned int i2;
+	unsigned int x1;
+	unsigned int x2;
+	char *p;
 
-	for (i = 0; i < n; i++)
-	{
-		s[i] = b;
-	}
-	return (s);
-}
-
-/**
- * *_calloc - function allocate memory for an array
- * @nmemb: array
- * @size: array size
- * Return: return pointer or Null
- */
-
-void *_calloc(unsigned int nmemb, unsigned int size)
-{
-	void *p;
-
-	if (nmemb == 0 || size == 0)
-		return (NULL);
-	p = malloc(nmemb * size);
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
+	i1 = 0;
+	while (s1[i1] != '\0')
+		i1++;
+	i2 = 0;
+	while (s2[i2] != '\0')
+		i2++;
+	if (n > i2)
+		n = i2;
+	p = malloc((i1 + n + 1) * sizeof(char));
 	if (p == NULL)
-		return (NULL);
-	_memset(p, 0, (nmemb * size));
+		return (0);
+	x1 = 0;
+	while (x1 < i1)
+	{
+		p[x1] = s1[x1];
+		x1++;
+	}
+	x2 = i1;
+	while (x2 < (i1 + n))
+	{
+		p[x2] = s2[x2 - i1];
+		x2++;
+	}
+	p[x2] = '\0';
 	return (p);
 }
