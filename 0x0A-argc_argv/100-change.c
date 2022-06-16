@@ -1,43 +1,55 @@
 #include <stdio.h>
 #include <stdlib.h>
-/**
- * isInteger - checks integer
- * @s: string
- * Return: 0 or 1
- */
-
-int isInteger(const char *s)
-{
-	int i = 0;
-
-	while (s[i] != '\0')
-	{
-		if (s[i] < '0' || s[i] > '9')
-			return (1);
-		i++;
-	}
-	return (0);
-}
+#include <string.h>
+#include <ctype.h>
 
 /**
- * main - adds positive numbers
- * @argc: int
- * @argv: list
+ * main - prints the minimum number of coins
+ * to make change for an amount of money
+ * @argc: n args
+ * @argv: arr args
  * Return: 0
  */
-int main(int argc, char const *argv[])
+int main(int argc, char *argv[])
 {
-	int sum = 0;
+	int value, c;
 
-	while (--argc)
-	{
-		if (isInteger(argv[argc]))
+	c = 0;
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-		sum += atoi(argv[argc]);
+	value = atoi(argv[1]);
+	if (value < 0)
+	{
+		printf("%d\n", 0);
+		return (0);
 	}
-	printf("%i\n", sum);
+	if (value % 25 >= 0)
+	{
+		c += value / 25;
+		value = value % 25;
+	}
+	if (value % 10 >= 0)
+	{
+		c += value / 10;
+		value = value % 10;
+	}
+	if (value % 5 >= 0)
+	{
+		c += value / 5;
+		value = value % 5;
+	}
+	if (value % 2 >= 0)
+	{
+		c += value / 2;
+		value = value % 2;
+	}
+	if (value % 1 >= 0)
+	{
+		c += value / 1;
+	}
+	printf("%d\n", c);
 	return (0);
 }
