@@ -1,7 +1,8 @@
 /**
- * struct hash_node_s - Node of hash table 
+ * struct hash_node_s - Node of hash table
+ *
  * @Key: The key, string
- * The key i unique in the HashTable
+ * The key i unique in the HashTable 
  * @Value: The value corresponding to a Key
  * @next: A pointer to the next node of list
  */
